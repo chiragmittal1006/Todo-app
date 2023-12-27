@@ -1,0 +1,166 @@
+@font-face {
+  src: url("./Poppins/Poppins-Medium.ttf");
+  font-family: chacha;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: chacha;
+  /* overflow: hidden; */
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 100px;
+}
+
+.app {
+  padding: 20px 40px 100px;
+  background: #fff;
+  font-size: 18px;
+  width: 50%;
+  margin: auto;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 40px;
+  width: 100%;
+}
+
+.heading img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.list {
+  padding: 0px 30px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.list ul {
+  list-style: none;
+  width: 100%;
+}
+
+.list ul li {
+  position: relative;
+  padding: 15px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  border: 1px solid rgb(78, 78, 78);
+}
+
+.list ul li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  margin-top: 2px;
+  width: 20px;
+  border-radius: 100%;
+  left: -30px;
+  align-self: center;
+  background: #dadada;
+}
+
+.list ul li.checked::before {
+  background-image: url(./images/checked.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.list ul li.checked {
+  text-decoration: line-through;
+  color: #878787;
+}
+
+li span {
+  background-image: url(./images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  right: 15px;
+  top: 10px;
+}
+
+li span:hover{
+    background: #edeef0;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid #000;
+  background: #dadada;
+}
+
+.input input {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding: 0px 20px;
+  color: black;
+  background: #dadada;
+}
+
+.input button {
+  width: 30%;
+  height: 100%;
+  background: #ff5945;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  cursor: pointer;
+  border-left: 1px solid #000;
+}
+
+@media (max-width:600px){
+    .main{
+        padding: 100px 5px;
+    }
+    .app{
+        width: 100%;
+    }
+    .list{
+        width: 100%;
+    }
+}
